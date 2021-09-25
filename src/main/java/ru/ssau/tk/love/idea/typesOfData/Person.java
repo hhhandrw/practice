@@ -29,6 +29,25 @@ public class Person {
         this.passportId = passportId;
     }
 
+    public Person() {
+    }
+
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Person(int passportId) {
+        this.passportId = passportId;
+    }
+
+    public Person(String firstName, String lastName, int passportId) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.passportId = passportId;
+    }
+
+
     public static void main(String[] args) {
         Person firstPerson = new Person();
 
@@ -59,5 +78,10 @@ public class Person {
         System.out.println(thirdPerson.getFirstName());
         System.out.println(thirdPerson.getLastName());
         System.out.println(thirdPerson.getPassportId());
+
+        Person forthPerson = new Person();
+        Person fithPerson = new Person("Ivan", "Petrov");
+        Person sixthPerson = new Person(666);
+        Person seventhPerson = new Person("Nurlan", "Saburov", 93);
     }
 }
