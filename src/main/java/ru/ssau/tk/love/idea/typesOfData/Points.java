@@ -22,4 +22,16 @@ public class Points {
     public static Point multiply(Point firstPoint, Point secondPoint) {
         return new Point(firstPoint.x * secondPoint.x, firstPoint.y * secondPoint.y, firstPoint.z * secondPoint.z);
     }
+
+    public static Point enlarge(Point point, double number) {
+       return new Point(point.x * number, point.y * number, point.z * number);
+    }
+
+    public static void main(String[] args) {
+        Point point = new Point(2,4,5);
+        Point resultPoint = enlarge(point,5);
+        System.out.println(resultPoint.x);
+        System.out.println(resultPoint.y);
+        System.out.println(resultPoint.z);
+    }
 }
