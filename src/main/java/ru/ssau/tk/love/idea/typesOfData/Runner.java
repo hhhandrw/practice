@@ -52,5 +52,27 @@ public class Runner {
         System.out.println(seventhPerson.getFirstName());
         System.out.println(seventhPerson.getLastName());
         System.out.println(seventhPerson.getPassportId());
+
+        Point firstPoint = new Point(1.55, 2.789, 3.2);
+        Point secondPoint = new Point(-99.66, 302, 5.1);
+        Point thirdPoint = new Point(0, 0, 0);
+        Point forthPoint = new Point(-4, -44.99, -100);
+
+        System.out.println(firstPoint.x);
+        System.out.println(firstPoint.y);
+        System.out.println(firstPoint.z);
+
+        System.out.println(secondPoint.x);
+        System.out.println(secondPoint.y);
+        System.out.println(secondPoint.z);
+
+        System.out.println(thirdPoint.x);
+        System.out.println(thirdPoint.y);
+        System.out.println(thirdPoint.z);
+
+        System.out.println(forthPoint.x);
+        System.out.println(forthPoint.y);
+        System.out.println(forthPoint.z);
+
     }
 }
