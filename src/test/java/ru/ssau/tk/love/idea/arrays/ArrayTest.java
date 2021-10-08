@@ -44,4 +44,18 @@ public class ArrayTest {
         assertEquals(referenceArray[3], Array.generateEvenArray(5)[3]);
         assertEquals(referenceArray[4], Array.generateEvenArray(5)[4]);
     }
+
+    @Test
+    public void generateFibonacciArrayTest() {
+        int[] referenceArray = new int[]{0, 1, 1, 2, 3, 5, 8, 13};
+
+        assertEquals(referenceArray[0], Array.generateFibonacciArray(8)[0]);
+        assertEquals(referenceArray[1], Array.generateFibonacciArray(8)[1]);
+        assertEquals(referenceArray[2], Array.generateFibonacciArray(8)[2]);
+        assertEquals(referenceArray[3], Array.generateFibonacciArray(8)[3]);
+        assertEquals(referenceArray[4], Array.generateFibonacciArray(8)[4]);
+        assertEquals(referenceArray[5], Array.generateFibonacciArray(8)[5]);
+        assertEquals(referenceArray[6], Array.generateFibonacciArray(8)[6]);
+        assertEquals(referenceArray[7], Array.generateFibonacciArray(8)[7]);
+    }
 }
