@@ -34,4 +34,14 @@ public class ArrayTest {
         assertEquals(referenceArray[4], Array.generateOddArray(5)[4]);
     }
 
+    @Test
+    public void generateEvenArrayTest() {
+        int[] referenceArray = new int[]{10, 8, 6, 4, 2};
+
+        assertEquals(referenceArray[0], Array.generateEvenArray(5)[0]);
+        assertEquals(referenceArray[1], Array.generateEvenArray(5)[1]);
+        assertEquals(referenceArray[2], Array.generateEvenArray(5)[2]);
+        assertEquals(referenceArray[3], Array.generateEvenArray(5)[3]);
+        assertEquals(referenceArray[4], Array.generateEvenArray(5)[4]);
+    }
 }

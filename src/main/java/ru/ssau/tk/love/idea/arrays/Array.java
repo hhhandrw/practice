@@ -24,4 +24,14 @@ public class Array {
         }
         return array;
     }
+
+    public static int[] generateEvenArray(int size) {
+        int[] array = new int[size];
+        int filler = 2;
+        for (int i = size - 1; i >= 0; i--) {
+            array[i] = filler;
+            filler += 2;
+        }
+        return array;
+    }
 }
