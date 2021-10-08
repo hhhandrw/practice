@@ -52,4 +52,29 @@ public class Array {
         }
         return array;
     }
+
+    public static double[] getArrayOfSolutions(double a, double b, double c) {
+        if (a == 0) {
+            double[] array = new double[1];
+            array[0] = -c / b;
+            return array;
+        } else {
+            double discriminant = b * b - 4 * a * c;
+
+            if (discriminant < 0) {
+                return new double[0];
+            } else if (discriminant == 0) {
+                double[] array = new double[1];
+                array[0] = -b / (2 * a);
+                return array;
+            } else if (discriminant > 0) {
+                double[] array = new double[2];
+                double sqrtOfDiscriminant = Math.sqrt(discriminant);
+                array[0] = (-b - sqrtOfDiscriminant) / (2 * a);
+                array[1] = (-b + sqrtOfDiscriminant) / (2 * a);
+                return array;
+            }
+        }
+        return new double[0];
+    }
 }
