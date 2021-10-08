@@ -58,4 +58,16 @@ public class ArrayTest {
         assertEquals(referenceArray[6], Array.generateFibonacciArray(8)[6]);
         assertEquals(referenceArray[7], Array.generateFibonacciArray(8)[7]);
     }
+
+    @Test
+    public void generateSqrArrayTest() {
+        int[] referenceArray = new int[]{0, 1, 4, 9, 16, 25};
+
+        assertEquals(referenceArray[0], Array.generateSqrArray(6)[0]);
+        assertEquals(referenceArray[1], Array.generateSqrArray(6)[1]);
+        assertEquals(referenceArray[2], Array.generateSqrArray(6)[2]);
+        assertEquals(referenceArray[3], Array.generateSqrArray(6)[3]);
+        assertEquals(referenceArray[4], Array.generateSqrArray(6)[4]);
+        assertEquals(referenceArray[5], Array.generateSqrArray(6)[5]);
+    }
 }
