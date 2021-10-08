@@ -22,4 +22,16 @@ public class ArrayTest {
         assertEquals(referenceArray[3], Array.generateArray(5)[3]);
         assertEquals(referenceArray[4], Array.generateArray(5)[4]);
     }
+
+    @Test
+    public void generateOddArrayTest() {
+        int[] referenceArray = new int[]{1, 3, 5, 7, 9};
+
+        assertEquals(referenceArray[0], Array.generateOddArray(5)[0]);
+        assertEquals(referenceArray[1], Array.generateOddArray(5)[1]);
+        assertEquals(referenceArray[2], Array.generateOddArray(5)[2]);
+        assertEquals(referenceArray[3], Array.generateOddArray(5)[3]);
+        assertEquals(referenceArray[4], Array.generateOddArray(5)[4]);
+    }
+
 }

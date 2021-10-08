@@ -14,4 +14,14 @@ public class Array {
         array[size - 1] = 2;
         return array;
     }
+
+    public static int[] generateOddArray(int size) {
+        int[] array = new int[size];
+        int filler = 1;
+        for (int i = 0; i < size; i++) {
+            array[i] = filler;
+            filler += 2;
+        }
+        return array;
+    }
 }
