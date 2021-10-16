@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class ArrayTest {
+    private final static double DELTA = 0.0001;
+
     @Test
     public void createArrayTest() {
         assertEquals(Array.createArray(5), new int[5]);
@@ -69,5 +71,13 @@ public class ArrayTest {
         assertEquals(referenceArray[3], Array.generateSqrArray(6)[3]);
         assertEquals(referenceArray[4], Array.generateSqrArray(6)[4]);
         assertEquals(referenceArray[5], Array.generateSqrArray(6)[5]);
+    }
+
+    @Test
+    public void testGetArrayOfSolutions() {
+        assertEquals(Array.getArrayOfSolutions(1, 4, 3), new double[]{-3, -1});
+        assertEquals(Array.getArrayOfSolutions(0, 4, 4), new double[]{-1});
+        assertEquals(Array.getArrayOfSolutions(1, 4, 4), new double[]{-2});
+        assertEquals(Array.getArrayOfSolutions(4, 4, 4), new double[]{});
     }
 }
