@@ -84,6 +84,14 @@ public class ArrayTest {
     @Test
     public void getExceptDivisibleByThreeArrayTest() {
         int[] referenceArray = new int[]{1, 2, 4, 5, 7, 8};
+
         assertEquals(Array.getExceptDivisibleByThreeArray(6), referenceArray);
+    }
+
+    @Test
+    public void getProgressionArrayTest() {
+        int[] referenceArray = new int[]{1, 4, 7, 10, 13, 16};
+
+        assertEquals(Array.getProgressionArray(6,1,3), referenceArray);
     }
 }

@@ -90,4 +90,15 @@ public class Array {
         }
         return array;
     }
+
+    public static int[] getProgressionArray(int size, int firstElement, int difference) {
+        int[] array = new int[size];
+        int a = firstElement + difference;
+        array[0] = firstElement;
+        for (int i = 1; i < size; i++) {
+            array[i] = a;
+            a += difference;
+        }
+        return array;
+    }
 }
