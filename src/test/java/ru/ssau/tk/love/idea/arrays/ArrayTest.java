@@ -74,10 +74,16 @@ public class ArrayTest {
     }
 
     @Test
-    public void testGetArrayOfSolutions() {
+    public void getArrayOfSolutionsTest() {
         assertEquals(Array.getArrayOfSolutions(1, 4, 3), new double[]{-3, -1});
         assertEquals(Array.getArrayOfSolutions(0, 4, 4), new double[]{-1});
         assertEquals(Array.getArrayOfSolutions(1, 4, 4), new double[]{-2});
         assertEquals(Array.getArrayOfSolutions(4, 4, 4), new double[]{});
+    }
+
+    @Test
+    public void getExceptDivisibleByThreeArrayTest() {
+        int[] referenceArray = new int[]{1, 2, 4, 5, 7, 8};
+        assertEquals(Array.getExceptDivisibleByThreeArray(6), referenceArray);
     }
 }

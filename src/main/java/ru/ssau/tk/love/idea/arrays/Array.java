@@ -77,4 +77,17 @@ public class Array {
         }
         return new double[0];
     }
+
+    public static int[] getExceptDivisibleByThreeArray(int size) {
+        int[] array = new int[size];
+        int a = 1;
+        for (int i = 0; i < size; i++) {
+            array[i] = a;
+            a++;
+            if (a % 3 == 0) {
+                a++;
+            }
+        }
+        return array;
+    }
 }
