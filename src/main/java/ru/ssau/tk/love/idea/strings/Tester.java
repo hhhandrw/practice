@@ -10,5 +10,7 @@ public class Tester {
         MyString.getByteString(rusStr);
         String mixStr = ("chocolate-шоколад");
         MyString.getByteString(mixStr);
+
+        MyString.getComparison();
     }
 }
