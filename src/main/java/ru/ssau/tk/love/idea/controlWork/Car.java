@@ -4,13 +4,13 @@ public class Car {
     private String number;
     private String model;
     private String name;
-    private int counter;
+    public static int counter = 0;
 
     public Car(String number, String model, String name) {
         this.number = number;
         this.model = model;
         this.name = name;
-        this.counter += 1;
+        counter += 1;
     }
 
     public String getNumber() {
