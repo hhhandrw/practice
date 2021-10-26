@@ -45,4 +45,12 @@ public class MyStringTest {
         assertEquals(MyString.thirdGetIndexOfIncluding("abcabcrrrrrrrrrrr", "abc"), 3);
         assertEquals(MyString.thirdGetIndexOfIncluding("abcabc", "abc"), 0);
     }
+
+    @Test
+    public void testGetQuantityOfStringsInArray() {
+        String[] array = {"pointer", "power", "cucumber", "salad"};
+        assertEquals(MyString.getQuantityOfStringsInArray(array, "po", "er"), 2);
+        assertEquals(MyString.getQuantityOfStringsInArray(array, "cuc", "r"), 1);
+        assertEquals(MyString.getQuantityOfStringsInArray(array, "abc", "r"), 0);
+    }
 }

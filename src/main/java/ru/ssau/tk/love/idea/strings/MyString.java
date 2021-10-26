@@ -59,4 +59,14 @@ public class MyString {
         int i = (firstStr.length() - 1) / 2;
         return firstStr.lastIndexOf(secondStr, i);
     }
+
+    public static int getQuantityOfStringsInArray(String[] array, String pre, String post) {
+        int count = 0;
+        for (String s : array) {
+            if (s.startsWith(pre) && s.endsWith(post)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
