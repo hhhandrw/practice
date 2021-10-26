@@ -23,8 +23,17 @@ public class MyStringTest {
     }
 
     @Test
-    public void testGetIndexOfIncluding() {
-        assertEquals(MyString.getIndexOfIncluding("abcaadcafgafg", "adca"),4);
-        assertEquals(MyString.getIndexOfIncluding("abcaadcafgafg", "mmmmmm"),-1);
+    public void testFirstGetIndexOfIncluding() {
+        assertEquals(MyString.firstGetIndexOfIncluding("abcaadcafgafg", "adca"), 4);
+        assertEquals(MyString.firstGetIndexOfIncluding("abcaadcafgafg", "mmmmmm"), -1);
+    }
+
+    @Test
+    public void testSecondGetIndexOfIncluding() {
+        assertEquals(MyString.secondGetIndexOfIncluding("abcaadcafgafg", "adca"), -1);
+        assertEquals(MyString.secondGetIndexOfIncluding("abcaadcafgafg", "mmmmmm"), -1);
+        assertEquals(MyString.secondGetIndexOfIncluding("abcaadcafgafg", "fga"), 8);
+        assertEquals(MyString.secondGetIndexOfIncluding("abcaadcafgafg", "caf"), 6);
+        assertEquals(MyString.secondGetIndexOfIncluding("abcaadcafgafg", "dcaf"), -1);
     }
 }

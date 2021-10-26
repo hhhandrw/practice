@@ -46,7 +46,12 @@ public class MyString {
         System.out.println("Символ\\№" + ++i); // символ \
     }
 
-    public static int getIndexOfIncluding (String firstStr, String secondStr) {
+    public static int firstGetIndexOfIncluding(String firstStr, String secondStr) {
         return firstStr.indexOf(secondStr);
+    }
+
+    public static int secondGetIndexOfIncluding(String firstStr, String secondStr) {
+        int i = (firstStr.length() - 1) / 2;
+        return firstStr.indexOf(secondStr, i);
     }
 }
