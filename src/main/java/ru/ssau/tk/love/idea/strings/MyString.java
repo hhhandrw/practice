@@ -17,8 +17,12 @@ public class MyString {
     public static void getComparison() {
         String firstString = "А и Б сидели на трубе";
         String secondString = new String(firstString);
-        System.out.println(firstString==secondString);
+        System.out.println(firstString == secondString);
         System.out.println(firstString.equals(secondString));
     }
 
+    public static boolean checkStringIsPalindrome(String str) {
+        String palindrome = new StringBuilder(str).reverse().toString();
+        return str.equals(palindrome);
+    }
 }
