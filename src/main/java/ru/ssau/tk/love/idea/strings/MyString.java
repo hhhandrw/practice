@@ -54,4 +54,9 @@ public class MyString {
         int i = (firstStr.length() - 1) / 2;
         return firstStr.indexOf(secondStr, i);
     }
+
+    public static int thirdGetIndexOfIncluding(String firstStr, String secondStr) {
+        int i = (firstStr.length() - 1) / 2;
+        return firstStr.lastIndexOf(secondStr, i);
+    }
 }

@@ -36,4 +36,13 @@ public class MyStringTest {
         assertEquals(MyString.secondGetIndexOfIncluding("abcaadcafgafg", "caf"), 6);
         assertEquals(MyString.secondGetIndexOfIncluding("abcaadcafgafg", "dcaf"), -1);
     }
+
+    @Test
+    public void testThirdGetIndexOfIncluding() {
+        assertEquals(MyString.thirdGetIndexOfIncluding("rrrabcrrrrrrrrrrrr", "abc"), 3);
+        assertEquals(MyString.thirdGetIndexOfIncluding("abcaadcafgafg", "mmmmmm"), -1);
+        assertEquals(MyString.thirdGetIndexOfIncluding("abcaadcafgafg", "fga"), -1);
+        assertEquals(MyString.thirdGetIndexOfIncluding("abcabcrrrrrrrrrrr", "abc"), 3);
+        assertEquals(MyString.thirdGetIndexOfIncluding("abcabc", "abc"), 0);
+    }
 }
