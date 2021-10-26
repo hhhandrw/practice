@@ -4,5 +4,7 @@ public class SecondTester {
     public static void main(String[] args) {
         System.out.println(MyString.checkStringIsPalindrome("казак"));
         System.out.println(MyString.checkStringIsPalindrome("123"));
+
+        MyString.ExploreScreening();
     }
 }
