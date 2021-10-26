@@ -21,4 +21,10 @@ public class MyStringTest {
         assertFalse(MyString.checkDifferentCase(null, null));
         assertFalse(MyString.checkDifferentCase("МЫ МОЛОДЦЫ", null));
     }
+
+    @Test
+    public void testGetIndexOfIncluding() {
+        assertEquals(MyString.getIndexOfIncluding("abcaadcafgafg", "adca"),4);
+        assertEquals(MyString.getIndexOfIncluding("abcaadcafgafg", "mmmmmm"),-1);
+    }
 }

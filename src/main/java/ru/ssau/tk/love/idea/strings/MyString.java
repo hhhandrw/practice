@@ -37,12 +37,16 @@ public class MyString {
 
     public static void ExploreScreening() {
         int i = 0;
-        System.out.println("Символ\t№" + ++i);
-        System.out.println("Символ\b№" + ++i);
-        System.out.println("Символ\n№" + ++i);
-        System.out.println("Символ\r№" + ++i);
-        System.out.println("Символ\'№" + ++i);
-        System.out.println("Символ\"№" + ++i);
-        System.out.println("Символ\\№" + ++i);
+        System.out.println("Символ\t№" + ++i); // табуляция
+        System.out.println("Символ\b№" + ++i); // удаление последнего элемента
+        System.out.println("Символ\n№" + ++i); // переход на новую строку
+        System.out.println("Символ\r№" + ++i); // игнорирование текста до /r
+        System.out.println("Символ\'№" + ++i); // символ '
+        System.out.println("Символ\"№" + ++i); // символ "
+        System.out.println("Символ\\№" + ++i); // символ \
+    }
+
+    public static int getIndexOfIncluding (String firstStr, String secondStr) {
+        return firstStr.indexOf(secondStr);
     }
 }
