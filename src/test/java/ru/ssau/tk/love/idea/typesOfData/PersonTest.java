@@ -35,4 +35,10 @@ public class PersonTest {
         assertEquals(thirdPerson.getLastName(), "Ronaldo");
         assertEquals(thirdPerson.getPassportId(), 7);
     }
+
+    @Test
+    public void testToString() {
+        Person person = new Person ("Andrey", "Khlebodarov", 789);
+        assertEquals(person.toString(), "Andrey Khlebodarov");
+    }
 }

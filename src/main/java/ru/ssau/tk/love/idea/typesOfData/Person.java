@@ -46,4 +46,8 @@ public class Person {
     public void setPassportId(int passportId) {
         this.passportId = passportId;
     }
+
+    public String toString() {
+        return this.firstName + " " + this.lastName;
+    }
 }
