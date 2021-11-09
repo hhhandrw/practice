@@ -38,7 +38,7 @@ public class PersonTest {
 
     @Test
     public void testToString() {
-        Person person = new Person ("Andrey", "Khlebodarov", 789);
+        Person person = new Person("Andrey", "Khlebodarov", 789);
         assertEquals(person.toString(), "Andrey Khlebodarov");
     }
 }
