@@ -35,4 +35,14 @@ public class MyClassTwoTest {
         Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> MyClassTwo.getArrayOfChars(stringsOne, 11));
         Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> MyClassTwo.getArrayOfChars(stringsOne, -2));
     }
+
+    @Test
+    public void testGetChar() {
+        String[] strings = {"apple", "ice", "pear"};
+        assertEquals(MyClassTwo.getChar(strings,1,1), 'c');
+        assertEquals(MyClassTwo.getChar(strings,2,0), 'p');
+
+        Assert.assertThrows(ArrayIndexOutOfBoundsException.class, () -> MyClassTwo.getChar(strings, 5,1));
+        Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> MyClassTwo.getChar(strings, 1,5));
+    }
 }

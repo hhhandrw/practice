@@ -16,4 +16,8 @@ public class MyClassTwo {
         }
         return chars;
     }
+
+    public static char getChar (String[] strings, int m, int n) {
+        return strings[m].charAt(n);
+    }
 }
