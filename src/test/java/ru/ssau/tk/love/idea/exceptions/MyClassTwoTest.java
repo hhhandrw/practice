@@ -39,10 +39,29 @@ public class MyClassTwoTest {
     @Test
     public void testGetChar() {
         String[] strings = {"apple", "ice", "pear"};
-        assertEquals(MyClassTwo.getChar(strings,1,1), 'c');
-        assertEquals(MyClassTwo.getChar(strings,2,0), 'p');
+        assertEquals(MyClassTwo.getChar(strings, 1, 1), 'c');
+        assertEquals(MyClassTwo.getChar(strings, 2, 0), 'p');
 
-        Assert.assertThrows(ArrayIndexOutOfBoundsException.class, () -> MyClassTwo.getChar(strings, 5,1));
-        Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> MyClassTwo.getChar(strings, 1,5));
+        Assert.assertThrows(ArrayIndexOutOfBoundsException.class, () -> MyClassTwo.getChar(strings, 5, 1));
+        Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> MyClassTwo.getChar(strings, 1, 5));
+    }
+
+    @Test
+    public void testGetDivision() {
+        String a = "9";
+        String b = "4";
+        assertEquals(MyClassTwo.getDivision(a, b), 2);
+
+        String c = "c";
+        String d = "d";
+        String e = "gnfsfgn";
+        String f = "0";
+
+        Assert.assertThrows(NumberFormatException.class, () -> MyClassTwo.getDivision(c, a));
+        Assert.assertThrows(NumberFormatException.class, () -> MyClassTwo.getDivision(c, d));
+        Assert.assertThrows(NumberFormatException.class, () -> MyClassTwo.getDivision(e, b));
+        Assert.assertThrows(NumberFormatException.class, () -> MyClassTwo.getDivision(e, d));
+        Assert.assertThrows(NumberFormatException.class, () -> MyClassTwo.getDivision(a, null));
+        Assert.assertThrows(ArithmeticException.class, () -> MyClassTwo.getDivision(a, f));
     }
 }
