@@ -101,4 +101,15 @@ public class Array {
         }
         return array;
     }
+
+    public static double[] getGeometricProgressionArray(int size, double firstElement, double q) {
+        double[] array = new double[size];
+        double a = firstElement * q;
+        array[0] = firstElement;
+        for (int i = 1; i < size; i++) {
+            array[i] = a;
+            a *= q;
+        }
+        return array;
+    }
 }

@@ -92,6 +92,23 @@ public class ArrayTest {
     public void getProgressionArrayTest() {
         int[] referenceArray = new int[]{1, 4, 7, 10, 13, 16};
 
-        assertEquals(Array.getProgressionArray(6,1,3), referenceArray);
+        assertEquals(Array.getProgressionArray(6, 1, 3), referenceArray);
+    }
+
+    @Test
+    public void getGeometricProgressionArrayTest() {
+        double[] firstReferenceArray = new double[]{1, 3, 9, 27, 81};
+        assertEquals(Array.getGeometricProgressionArray(5, 1, 3), firstReferenceArray);
+
+        double[] secondReferenceArray = new double[]{202, 40.4, 8.08, 1.616, 0.3232, 0.0646, 0.0129, 0.0025};
+        double[] array = Array.getGeometricProgressionArray(8, 202, 0.2);
+        assertEquals(array[0], secondReferenceArray[0], DELTA);
+        assertEquals(array[1], secondReferenceArray[1], DELTA);
+        assertEquals(array[2], secondReferenceArray[2], DELTA);
+        assertEquals(array[3], secondReferenceArray[3], DELTA);
+        assertEquals(array[4], secondReferenceArray[4], DELTA);
+        assertEquals(array[5], secondReferenceArray[5], DELTA);
+        assertEquals(array[6], secondReferenceArray[6], DELTA);
+        assertEquals(array[7], secondReferenceArray[7], DELTA);
     }
 }
