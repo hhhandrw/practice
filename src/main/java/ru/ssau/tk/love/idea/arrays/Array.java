@@ -112,4 +112,22 @@ public class Array {
         }
         return array;
     }
+
+    public static int[] getArrayOfDividers(int a) {
+        int quantityOfDividers = 0;
+        for (int i = 1; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                quantityOfDividers++;
+            }
+        }
+        int[] dividers = new int[quantityOfDividers];
+        int j = 0;
+        for (int i = 1; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                dividers[j] = i;
+                j++;
+            }
+        }
+        return dividers;
+    }
 }

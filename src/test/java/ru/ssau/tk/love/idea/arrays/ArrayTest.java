@@ -111,4 +111,13 @@ public class ArrayTest {
         assertEquals(array[6], secondReferenceArray[6], DELTA);
         assertEquals(array[7], secondReferenceArray[7], DELTA);
     }
+
+    @Test
+    public void getArrayOfDividersTest() {
+        int[] firstReferenceArray = {1, 2, 3, 4, 5, 6};
+        assertEquals(Array.getArrayOfDividers(60), firstReferenceArray);
+
+        int[] secondReferenceArray = {1, 2, 4, 5, 8, 10, 16, 20, 25, 32, 40};
+        assertEquals(Array.getArrayOfDividers(1600), secondReferenceArray);
+    }
 }
