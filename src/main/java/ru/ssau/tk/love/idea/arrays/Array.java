@@ -130,4 +130,31 @@ public class Array {
         }
         return dividers;
     }
+
+    public static int[] getSymmetricalArray(int size) {
+        int[] symmetricalArray = new int[size];
+        int j = 1;
+        if (size % 2 != 0) {
+            for (int i = 0; i <= (size / 2); i++) {
+                symmetricalArray[i] = j;
+                j++;
+            }
+            j = size / 2;
+            for (int i = (size / 2) + 1; i < size; i++) {
+                symmetricalArray[i] = j;
+                j--;
+            }
+        } else {
+            for (int i = 0; i < (size / 2); i++) {
+                symmetricalArray[i] = j;
+                j++;
+            }
+            j = size / 2;
+            for (int i = (size / 2); i < size; i++) {
+                symmetricalArray[i] = j;
+                j--;
+            }
+        }
+        return symmetricalArray;
+    }
 }

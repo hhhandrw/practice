@@ -120,4 +120,14 @@ public class ArrayTest {
         int[] secondReferenceArray = {1, 2, 4, 5, 8, 10, 16, 20, 25, 32, 40};
         assertEquals(Array.getArrayOfDividers(1600), secondReferenceArray);
     }
+
+    @Test
+    public void getSymmetricalArrayTest() {
+        int[] firstReferenceArray = {1, 2, 3, 4, 3, 2, 1};
+        assertEquals(Array.getSymmetricalArray(7), firstReferenceArray);
+
+        int[] secondReferenceArray = {1, 2, 3, 4, 4, 3, 2, 1};
+        assertEquals(Array.getSymmetricalArray(8), secondReferenceArray);
+    }
+
 }
