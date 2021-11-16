@@ -137,4 +137,11 @@ public class ArrayTest {
         double[] oppositeArray = {-1.1, -2.3, -3, 5, 10.25};
         assertEquals(array, oppositeArray);
     }
+
+    @Test
+    public void arrayContainsNumberTest() {
+        double[] array= {1.1, 2.3, 3, -5, -10.25};
+        assertTrue(Array.arrayContainsNumber(array, -5));
+        assertFalse(Array.arrayContainsNumber(array, 2));
+    }
 }

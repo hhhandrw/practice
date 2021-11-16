@@ -164,4 +164,15 @@ public class Array {
             array[i] = a;
         }
     }
+
+    public static boolean arrayContainsNumber (double[] array, double number) {
+        boolean contains = false;
+        for (double d: array) {
+            if (d == number) {
+                contains = true;
+                break;
+            }
+        }
+        return contains;
+    }
 }
