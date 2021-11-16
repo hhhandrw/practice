@@ -196,4 +196,18 @@ public class Array {
         }
         return q;
     }
+
+    public static int getMax(int[] array) {
+        if (array.length == 0) {
+            return 0;
+        } else {
+            int max = 0;
+            for (int i : array) {
+                if (i > max) {
+                    max = i;
+                }
+            }
+            return max;
+        }
+    }
 }

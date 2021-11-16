@@ -156,7 +156,16 @@ public class ArrayTest {
 
     @Test
     public void getQuantityOfEvenNumbersTest() {
-        int[] arrayOne = {23, 2, 3, 4, 5, 6, 157, 1008, 100000};
-        assertEquals(Array.getQuantityOfEvenNumbers(arrayOne), 5);
+        int[] array = {23, 2, 3, 4, 5, 6, 157, 1008, 100000};
+        assertEquals(Array.getQuantityOfEvenNumbers(array), 5);
     }
+
+    @Test
+    public void getMaxTest () {
+        int[] array = {23, 2, 3, 4, 50000, 6, 157, 1008, 100};
+        assertEquals(Array.getMax(array), 50000);
+
+        int[] emptyArray = {};
+        assertEquals(Array.getMax(emptyArray), 0);
+     }
 }
