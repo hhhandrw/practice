@@ -140,8 +140,17 @@ public class ArrayTest {
 
     @Test
     public void arrayContainsNumberTest() {
-        double[] array= {1.1, 2.3, 3, -5, -10.25};
+        double[] array = {1.1, 2.3, 3, -5, -10.25};
         assertTrue(Array.arrayContainsNumber(array, -5));
         assertFalse(Array.arrayContainsNumber(array, 2));
+    }
+
+    @Test
+    public void arrayContainsNullTest() {
+        Integer[] arrayOne = {1, 2, 3, 4, null};
+        assertTrue(Array.arrayContainsNull(arrayOne));
+
+        Integer[] arrayTwo = {1, 2, 3, 4};
+        assertFalse(Array.arrayContainsNull(arrayTwo));
     }
 }

@@ -165,10 +165,21 @@ public class Array {
         }
     }
 
-    public static boolean arrayContainsNumber (double[] array, double number) {
+    public static boolean arrayContainsNumber(double[] array, double number) {
         boolean contains = false;
-        for (double d: array) {
+        for (double d : array) {
             if (d == number) {
+                contains = true;
+                break;
+            }
+        }
+        return contains;
+    }
+
+    public static boolean arrayContainsNull(Integer[] array) {
+        boolean contains = false;
+        for (Integer i : array) {
+            if (i == null) {
                 contains = true;
                 break;
             }
