@@ -153,4 +153,10 @@ public class ArrayTest {
         Integer[] arrayTwo = {1, 2, 3, 4};
         assertFalse(Array.arrayContainsNull(arrayTwo));
     }
+
+    @Test
+    public void getQuantityOfEvenNumbersTest() {
+        int[] arrayOne = {23, 2, 3, 4, 5, 6, 157, 1008, 100000};
+        assertEquals(Array.getQuantityOfEvenNumbers(arrayOne), 5);
+    }
 }

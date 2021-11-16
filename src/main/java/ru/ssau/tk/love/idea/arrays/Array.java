@@ -186,4 +186,14 @@ public class Array {
         }
         return contains;
     }
+
+    public static int getQuantityOfEvenNumbers(int[] array) {
+        int q = 0;
+        for (int i : array) {
+            if (i % 2 == 0) {
+                q++;
+            }
+        }
+        return q;
+    }
 }
