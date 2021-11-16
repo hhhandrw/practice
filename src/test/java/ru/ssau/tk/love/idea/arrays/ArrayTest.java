@@ -130,4 +130,11 @@ public class ArrayTest {
         assertEquals(Array.getSymmetricalArray(8), secondReferenceArray);
     }
 
+    @Test
+    public void getOppositeArrayTest() {
+        double[] array = {1.1, 2.3, 3, -5, -10.25};
+        Array.getOppositeArray(array);
+        double[] oppositeArray = {-1.1, -2.3, -3, 5, 10.25};
+        assertEquals(array, oppositeArray);
+    }
 }

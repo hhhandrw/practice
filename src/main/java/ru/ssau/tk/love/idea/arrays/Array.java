@@ -157,4 +157,11 @@ public class Array {
         }
         return symmetricalArray;
     }
+
+    public static void getOppositeArray(double[] array) {
+        for (int i = 0; i < array.length; i++) {
+            double a = array[i] * (-1);
+            array[i] = a;
+        }
+    }
 }
