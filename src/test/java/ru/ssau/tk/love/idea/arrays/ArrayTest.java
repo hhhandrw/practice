@@ -161,11 +161,17 @@ public class ArrayTest {
     }
 
     @Test
-    public void getMaxTest () {
+    public void getMaxTest() {
         int[] array = {23, 2, 3, 4, 50000, 6, 157, 1008, 100};
         assertEquals(Array.getMax(array), 50000);
 
         int[] emptyArray = {};
         assertEquals(Array.getMax(emptyArray), 0);
-     }
+    }
+
+    @Test
+    public void getSumTest() {
+        double[] array = {1.1, 2.3, 3, -5, -10.25};
+        assertEquals(Array.getSum(array), -6.15);
+    }
 }
