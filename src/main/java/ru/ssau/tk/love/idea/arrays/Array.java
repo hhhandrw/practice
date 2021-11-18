@@ -220,4 +220,22 @@ public class Array {
         }
         return sum;
     }
+
+    public static boolean quantityOfDividersOfFirstIsMore(int[] array) {
+        int a = 0;
+        int b = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] % array[0] == 0) {
+                a++;
+            }
+        }
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] % array[array.length - 1] == 0) {
+                b++;
+            }
+        }
+        boolean bool;
+        bool = a > b;
+        return bool;
+    }
 }

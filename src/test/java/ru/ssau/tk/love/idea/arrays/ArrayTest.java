@@ -174,4 +174,13 @@ public class ArrayTest {
         double[] array = {1.1, 2.3, 3, -5, -10.25};
         assertEquals(Array.getSum(array), -6.15);
     }
+
+    @Test
+    public void quantityOfDividersOfFirstIsMoreTest() {
+        int[] firstArray = {2, 4, 6, 8, 3};
+        assertTrue(Array.quantityOfDividersOfFirstIsMore(firstArray));
+
+        int[] secondArray = {2, 9, 6, 12, 3};
+        assertFalse(Array.quantityOfDividersOfFirstIsMore(secondArray));
+    }
 }
