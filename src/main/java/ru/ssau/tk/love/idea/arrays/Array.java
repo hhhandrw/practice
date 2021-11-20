@@ -238,4 +238,14 @@ public class Array {
         bool = a > b;
         return bool;
     }
+
+    public static int getIndexOfElement(double[] array, double a) {
+        int i;
+        for (i = 0; i < array.length; i++) {
+            if (array[i] == a) {
+                break;
+            }
+        }
+        return i;
+    }
 }

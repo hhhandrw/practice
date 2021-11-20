@@ -183,4 +183,11 @@ public class ArrayTest {
         int[] secondArray = {2, 9, 6, 12, 3};
         assertFalse(Array.quantityOfDividersOfFirstIsMore(secondArray));
     }
+
+    @Test
+    public void getIndexOfElementTest() {
+        double[] array = {1.1, 2.3, 3, -5, -10.25};
+        assertEquals(Array.getIndexOfElement(array, 2.3), 1);
+        assertEquals(Array.getIndexOfElement(array, -10.25), 4);
+    }
 }
