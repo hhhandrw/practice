@@ -198,4 +198,16 @@ public class ArrayTest {
         double[] resultArray = {1.1, 2.3, -10.25, -5, 3};
         assertEquals(array, resultArray);
     }
+
+    @Test
+    public void applyBitwiseNegationTest() {
+        int[] array = {2, 4, 6, 8, 3};
+        Array.applyBitwiseNegation(array);
+        int[] firstResultArray = {-3, -5, -7, -9, -4};
+        assertEquals(array, firstResultArray);
+
+        Array.applyBitwiseNegation(array);
+        int[] secondResultArray = {2, 4, 6, 8, 3};
+        assertEquals(array, secondResultArray);
+    }
 }

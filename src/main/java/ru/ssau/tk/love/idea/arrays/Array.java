@@ -270,4 +270,10 @@ public class Array {
         array[maxIndex] = min;
         array[minIndex] = max;
     }
+
+    public static void applyBitwiseNegation(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ~array[i];
+        }
+    }
 }
