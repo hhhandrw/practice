@@ -186,8 +186,16 @@ public class ArrayTest {
 
     @Test
     public void getIndexOfElementTest() {
-        double[] array = {1.1, 2.3, 3, -5, -10.25};
+        double[] array = {1.1, 2.3, 3, -5, -10.25, -10.25};
         assertEquals(Array.getIndexOfElement(array, 2.3), 1);
         assertEquals(Array.getIndexOfElement(array, -10.25), 4);
+    }
+
+    @Test
+    public void swapMaxAndMinTest() {
+        double[] array = {1.1, 2.3, 3, -5, -10.25};
+        Array.swapMaxAndMin(array);
+        double[] resultArray = {1.1, 2.3, -10.25, -5, 3};
+        assertEquals(array, resultArray);
     }
 }

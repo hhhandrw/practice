@@ -248,4 +248,26 @@ public class Array {
         }
         return i;
     }
+
+    public static void swapMaxAndMin(double[] array) {
+        double max = array[0];
+        double min = array[0];
+        int maxIndex = 0;
+        int minIndex = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                maxIndex = i;
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            if (min > array[i]) {
+                min = array[i];
+                minIndex = i;
+            }
+        }
+        array[maxIndex] = min;
+        array[minIndex] = max;
+    }
 }
