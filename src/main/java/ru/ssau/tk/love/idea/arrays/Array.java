@@ -276,4 +276,12 @@ public class Array {
             array[i] = ~array[i];
         }
     }
+
+    public static int[] getBitwiseNegationArray(int[] array) {
+        int[] newArray = new int[array.length];
+        for (int i = 0, j = 0; i < array.length; i++, j++) {
+            newArray[j] = ~array[i];
+        }
+        return newArray;
+    }
 }

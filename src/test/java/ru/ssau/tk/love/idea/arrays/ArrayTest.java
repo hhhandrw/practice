@@ -210,4 +210,16 @@ public class ArrayTest {
         int[] secondResultArray = {2, 4, 6, 8, 3};
         assertEquals(array, secondResultArray);
     }
+
+    @Test
+    public void getBitwiseNegationArray() {
+        int[] array = {2, 4, 6, 8, 3};
+        int[] firstResultArray = Array.getBitwiseNegationArray(array);
+        int[] firstReferenceArray = {-3,-5,-7,-9,-4};
+        assertEquals(firstResultArray, firstReferenceArray);
+
+        int[] secondResultArray = Array.getBitwiseNegationArray(firstReferenceArray);
+        int[] secondReferenceArray = {2, 4, 6, 8, 3};
+        assertEquals(secondResultArray, secondReferenceArray);
+    }
 }
