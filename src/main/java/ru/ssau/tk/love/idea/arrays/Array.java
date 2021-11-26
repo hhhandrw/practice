@@ -301,4 +301,12 @@ public class Array {
         }
         return pairSumArray;
     }
+
+    public static boolean[] getArrayOfBooleans(int[] array) {
+        boolean[] boolArray = new boolean[array.length];
+        for (int i = 0; i < array.length; i++) {
+            boolArray[i] = array[i] % 2 == 0;
+        }
+        return boolArray;
+    }
 }

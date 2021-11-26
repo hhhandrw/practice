@@ -233,4 +233,12 @@ public class ArrayTest {
         int[] secondReferenceArray = {6, 14, -3, -2};
         assertEquals(Array.getPairSumArray(secondArray), secondReferenceArray);
     }
+
+    @Test
+    public void getArrayOfBooleansTest() {
+        int[] array = {2, 5, 6, 8, 3, -6, -2, -15};
+        boolean[] resultArray = Array.getArrayOfBooleans(array);
+        boolean[] referenceArray = {true, false, true, true, false, true, true, false};
+        assertEquals(resultArray, referenceArray);
+    }
 }
