@@ -212,14 +212,25 @@ public class ArrayTest {
     }
 
     @Test
-    public void getBitwiseNegationArray() {
+    public void getBitwiseNegationArrayTest() {
         int[] array = {2, 4, 6, 8, 3};
         int[] firstResultArray = Array.getBitwiseNegationArray(array);
-        int[] firstReferenceArray = {-3,-5,-7,-9,-4};
+        int[] firstReferenceArray = {-3, -5, -7, -9, -4};
         assertEquals(firstResultArray, firstReferenceArray);
 
         int[] secondResultArray = Array.getBitwiseNegationArray(firstReferenceArray);
         int[] secondReferenceArray = {2, 4, 6, 8, 3};
         assertEquals(secondResultArray, secondReferenceArray);
+    }
+
+    @Test
+    public void getPairSumArrayTest() {
+        int[] firstArray = {2, 4, 6, 8, 3, -6, -2, -16};
+        int[] firstReferenceArray = {6, 14, -3, -18};
+        assertEquals(Array.getPairSumArray(firstArray), firstReferenceArray);
+
+        int[] secondArray = {2, 4, 6, 8, 3, -6, -2};
+        int[] secondReferenceArray = {6, 14, -3, -2};
+        assertEquals(Array.getPairSumArray(secondArray), secondReferenceArray);
     }
 }

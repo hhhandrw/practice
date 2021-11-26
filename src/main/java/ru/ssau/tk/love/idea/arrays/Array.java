@@ -284,4 +284,21 @@ public class Array {
         }
         return newArray;
     }
+
+    public static int[] getPairSumArray(int[] array) {
+        int[] pairSumArray;
+        if (array.length % 2 == 0) {
+            pairSumArray = new int[array.length / 2];
+            for (int i = 0; i < pairSumArray.length; i++) {
+                pairSumArray[i] = array[i * 2] + array[i * 2 + 1];
+            }
+        } else {
+            pairSumArray = new int[array.length / 2 + 1];
+            for (int i = 0; i < pairSumArray.length - 1; i++) {
+                pairSumArray[i] = array[i * 2] + array[i * 2 + 1];
+                pairSumArray[array.length / 2] = array[array.length - 1];
+            }
+        }
+        return pairSumArray;
+    }
 }
