@@ -53,4 +53,12 @@ public class MyStringTest {
         assertEquals(MyString.getQuantityOfStringsInArray(array, "cuc", "r"), 1);
         assertEquals(MyString.getQuantityOfStringsInArray(array, "abc", "r"), 0);
     }
+
+    @Test
+    public void testFindStringsInArray() {
+        String[] array = {"   pointer      ", "  power ", "cucumber         ", "       salad"};
+        assertEquals(MyString.findStringsInArray(array, "po", "er"), 2);
+        assertEquals(MyString.findStringsInArray(array, "cuc", "r"), 1);
+        assertEquals(MyString.findStringsInArray(array, "abc", "r"), 0);
+    }
 }

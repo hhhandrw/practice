@@ -69,4 +69,14 @@ public class MyString {
         }
         return count;
     }
+
+    public static int findStringsInArray(String[] array, String pre, String post) {
+        int count = 0;
+        for (String s : array) {
+            if (s.trim().startsWith(pre) && s.trim().endsWith(post)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
