@@ -61,4 +61,9 @@ public class MyStringTest {
         assertEquals(MyString.findStringsInArray(array, "cuc", "r"), 1);
         assertEquals(MyString.findStringsInArray(array, "abc", "r"), 0);
     }
+
+    @Test
+    public void testReplace() {
+        assertEquals(MyString.replace("ороророро", "оро", "ро"), "роррро");
+    }
 }

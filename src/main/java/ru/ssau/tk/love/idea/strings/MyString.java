@@ -79,4 +79,12 @@ public class MyString {
         }
         return count;
     }
+
+    public static String replace(String sOne, String sTwo, String sThree) {
+        String sFour = sOne;
+        for (int i = 0; sFour.contains(sTwo) && i < 100; ++i) {
+            sFour = sFour.replaceAll(sTwo, sThree);
+        }
+        return sFour;
+    }
 }
