@@ -66,4 +66,10 @@ public class MyStringTest {
     public void testReplace() {
         assertEquals(MyString.replace("ороророро", "оро", "ро"), "роррро");
     }
+
+    @Test
+    public void testGetSubstring() {
+        String str = "хочу быть программистом";
+        assertEquals(MyString.getSubstring(str, 1, 9), "очу быть");
+    }
 }
