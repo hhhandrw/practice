@@ -24,4 +24,12 @@ public class NamedPoint extends Point {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        if (this.name == null) {
+            return super.toString();
+        }
+        return this.name + " " + super.toString();
+    }
 }

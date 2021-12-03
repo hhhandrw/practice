@@ -26,4 +26,12 @@ public class NamedPointTest {
         assertEquals(thirdPoint.getName(), "A");
     }
 
+    @Test
+    public void testToString() {
+        NamedPoint first = new NamedPoint(1, 2, 3);
+        assertEquals(first.toString(), "[1.0, 2.0, 3.0]");
+
+        NamedPoint second = new NamedPoint(1, 2, 3, "C");
+        assertEquals(second.toString(), "C [1.0, 2.0, 3.0]");
+    }
 }
